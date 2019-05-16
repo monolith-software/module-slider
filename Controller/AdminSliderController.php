@@ -51,9 +51,9 @@ class AdminSliderController extends Controller
      */
     public function sliderAction(Request $request, $id)
     {
-        // @todo сделать загрузку оригинальных картинок в /app/usr/SmartSliderModule
+        // @todo сделать загрузку оригинальных картинок в /usr/SmartSliderModule
         /*
-        $usrDir = $this->container->getParameter('kernel.root_dir') . '/usr';
+        $usrDir = $this->container->getParameter('kernel.project_dir') . '/usr';
 
         $sliderOriginalDir = '/SmartSliderModule';
 

@@ -170,7 +170,7 @@ class SliderService
         $em = $this->container->get('doctrine.orm.entity_manager');
 
         foreach ($em->getRepository(Slider::class)->findAll() as $slider) {
-            $dir = $this->container->getParameter('kernel.root_dir').'/../web/'.$slider->getWebPath();
+            $dir = $this->container->getParameter('kernel.project_dir').'/web/'.$slider->getWebPath();
 
             if (!is_dir($dir) and false === @mkdir($dir, 0777, true)) {
                 throw new \RuntimeException(sprintf("Unable to create the %s directory (%s)\n", $slider->getWebPath(), $dir));
